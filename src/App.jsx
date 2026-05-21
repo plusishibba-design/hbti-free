@@ -54,7 +54,7 @@ function App() {
   const renderPage = () => {
     switch (route.page) {
       case 'home':
-        return <HomeHero onStart={() => navigate('test')} onAboutClick={() => navigate('about')} onTypeList={() => navigate('types')} />;
+        return <HomeHero onStart={() => navigate('test')} />;
       case 'test':
         return <Quiz onComplete={() => navigate('result')} onCancel={() => navigate('home')} />;
       case 'result':
@@ -72,7 +72,7 @@ function App() {
       case 'terms':
         return <TermsOfService />;
       default:
-        return <HomeHero onStart={() => navigate('test')} onAboutClick={() => navigate('about')} onTypeList={() => navigate('types')} />;
+        return <HomeHero onStart={() => navigate('test')} />;
     }
   };
 
@@ -93,13 +93,11 @@ function App() {
       <footer className="app-footer">
         <div className="footer-links">
           <a href="/about" onClick={(e) => { e.preventDefault(); navigate('about'); }}>About</a>
-          <a href="/types" onClick={(e) => { e.preventDefault(); navigate('types'); }}>16 タイプ</a>
           <a href="/privacy" onClick={(e) => { e.preventDefault(); navigate('privacy'); }}>Privacy</a>
           <a href="/terms" onClick={(e) => { e.preventDefault(); navigate('terms'); }}>Terms</a>
           <a href="/contact" onClick={(e) => { e.preventDefault(); navigate('contact'); }}>Contact</a>
         </div>
-        <p className="footer-tagline">HBTI is a project by Studio T. Ishi.</p>
-        <p className="footer-copy">© 2026 Studio T. Ishi.</p>
+        <p className="footer-copy">© 2026 HBTI.</p>
       </footer>
     </div>
   );
