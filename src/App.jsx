@@ -81,12 +81,10 @@ function App() {
       <header className="app-header">
         <h1 className="app-brand" onClick={() => navigate('home')} role="button" tabIndex={0}>
           <span className="app-brand-mark">HBTI</span>
-          <span className="app-brand-name">Hook-Bait Type Indicator</span>
         </h1>
         <nav className="app-nav">
-          <a href="/types" onClick={(e) => { e.preventDefault(); navigate('types'); }}>16 タイプ一覧</a>
+          <a href="/types" onClick={(e) => { e.preventDefault(); navigate('types'); }}>16 タイプ</a>
           <a href="/about" onClick={(e) => { e.preventDefault(); navigate('about'); }}>About</a>
-          <a href="/contact" onClick={(e) => { e.preventDefault(); navigate('contact'); }}>Contact</a>
         </nav>
       </header>
 
